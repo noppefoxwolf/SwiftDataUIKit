@@ -8,7 +8,7 @@ To integrate a package into your Swift project using Swift Package Manager, add 
 
 ```swift
 dependencies: [
-    .package(url: "https://url-to-package", from: "1.0.0")
+    .package(url: "https://github.com/noppefoxwolf/SwiftDataUIKit", from: "0.0.1")
 ]
 ```
 

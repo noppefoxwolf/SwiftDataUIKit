@@ -32,7 +32,11 @@ public struct Query<T: PersistentModel> {
                 publisher?.send($0)
             }
         )
-        let vc = _UIHostingView(rootView: rootView.modelContainer(modelContainer))
-        view.addSubview(vc)
+        let hostingConfiguration = UIHostingConfiguration(
+            content: { rootView.modelContainer(modelContainer) }
+        )
+        let contentView = hostingConfiguration.makeContentView()
+        view.addSubview(contentView)
+        contentView.isHidden = true
     }
 }
